@@ -8,7 +8,7 @@ import NoPage from "./components/NoPage";
 import Main from "./pages/Main";
 function App() {
   return (
-    <BrowserRouter basename="/bertpenano">
+    <BrowserRouter basename="/penano-portfolio">
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="*" element={<NoPage />} />
