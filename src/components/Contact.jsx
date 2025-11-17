@@ -13,21 +13,25 @@ function Contact() {
   const inputEmail = useRef();
   const inputMessage = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
     var templateParams = {
       name: inputName.current.value,
-      title: "TEST",
+      title: "New Message",
       message: inputMessage.current.value,
-      email: "programming1404@gmail.com",
+      email: "janalbertpenano14@gmail.com",
       from_email: inputEmail.current.value,
     };
-    emailjs
+    await emailjs
       .send("service_gpd346c", "template_xwqjvnw", templateParams)
       .then(() => {
         alert(`Email successfully sent by ${templateParams.name}!`);
       });
+
+    inputName.current.value = "";
+    inputEmail.current.value = "";
+    inputMessage.current.value = "";
   };
 
   emailjs.init({
@@ -71,6 +75,7 @@ function Contact() {
                   placeholder="Email"
                   name="user_email"
                   ref={inputEmail}
+                  required
                 />
               </div>
               <div className="message">
