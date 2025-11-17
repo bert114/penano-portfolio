@@ -1,4 +1,6 @@
 .primary-btn {
+  box-shadow: var(--shadow-m);
+  border: none !important;
   & {
     --color: #ad7e38;
     font-family: inherit;

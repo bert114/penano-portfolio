@@ -44,8 +44,8 @@
 
     p {
       margin: 1rem 0 2rem 0;
-
-      color: rgb(108, 108, 108);
+      color: var(--text-muted);
+      font-weight: 400;
     }
   }
 

@@ -59,6 +59,18 @@ function ProjectListings() {
   };
   */
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const rawList = await fetch("/penano-portfolio/projectnew.json");
+
+      const res = await rawList.json();
+
+      console.log(res);
+    };
+
+    fetchData();
+  }, []);
+
   const handelClick = () => {
     if (loading) {
       return;

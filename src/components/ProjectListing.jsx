@@ -14,7 +14,7 @@ function ProjectListing({ project, index }) {
         <div className="flex">
           <div className="box1">
             <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <p>{`${project.description.slice(0, 100)}...`}</p>
           </div>
 
           <div className="btn-wrapper">

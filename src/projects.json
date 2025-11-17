@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "img": "fm/ecom.png",
+      "title": "Simple E-commerce Website",
+      "description": "This challenge is designed to sharpen your JavaScript and form validation skills. Working with dates in JavaScript can be tricky, so this will be a nice test!",
+      "id": "p50",
+      "liveUrl": "https://bert114.github.io/NEXUS/",
+      "repoUrl": "https://github.com/bert114/NEXUS.git"
+    },
+    {
       "img": "fm/p1.png",
       "title": "Age Calculator",
       "description": "This challenge is designed to sharpen your JavaScript and form validation skills. Working with dates in JavaScript can be tricky, so this will be a nice test!",

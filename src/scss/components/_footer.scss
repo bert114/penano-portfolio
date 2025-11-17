@@ -16,9 +16,11 @@ border {
 
 .footer {
   font-size: 14px;
-  background-color: rgb(201, 201, 201);
+  background-color: var(--bg);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  box-shadow: var(--shadow-m);
   padding: 3.5rem 0;
+  color: var(--text);
 
   &-container {
     width: 90%;
@@ -51,7 +53,7 @@ border {
   .text {
     max-width: 600px;
     margin-inline: auto;
-    color: var(--clr-input);
+    color: var(--text-muted);
     font-size: 12px;
   }
 
@@ -70,6 +72,6 @@ border {
     text-align: center;
     max-width: 350px;
     margin-inline: auto;
-    color: var(--clr-input);
+    color: var(--text-muted);
   }
 }

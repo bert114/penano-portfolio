@@ -12,9 +12,15 @@ body {
   font-family: mont;
   font-weight: 500;
   font-size: 14px;
+  background-color: var(--bg-dark);
+  color: var(--text);
 }
 
 // =====CURRENT====== //
+body:has(.menu-wrapper.active) {
+  overflow: hidden;
+}
+
 .hero {
   --percent: 90%;
 
@@ -33,38 +39,54 @@ body {
 
     button {
       all: initial;
-      z-index: 100;
+      z-index: 1000000;
+
+      font-size: 20px;
+      color: var(--text);
     }
   }
 
-  .nav-wrapper {
-    position: relative;
+  .menu-wrapper {
+    opacity: 0;
+    > * {
+      width: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: width 1s ease, opacity 0.6s;
+      height: 0;
+    }
+  }
 
-    .menu-wrapper {
-      display: none;
+  .menu-wrapper.active {
+    opacity: 1;
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    backdrop-filter: blur(4px);
+
+    > * {
+      background-color: var(--bg);
+      width: min(70%, 280px);
+      margin-left: auto;
+      height: 100%;
+      padding: 2rem 0.7rem;
+      padding-top: 5rem;
+      display: flex;
+      flex-direction: column;
+      overflow: initial;
+      opacity: 1;
     }
 
-    .menu-desktop {
-      display: block;
-      background-color: rgb(220, 220, 220);
-      position: absolute;
-      width: 100%;
-      z-index: 100;
+    li {
+      padding: 0.4rem 0.7rem;
+      border-radius: 4px;
+    }
 
-      ul {
-        text-align: center;
-        width: 80%;
-        margin-inline: auto;
-        padding: 2rem 0;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      a {
-        font-weight: 600;
-        cursor: pointer;
-      }
+    > * li.active {
+      background-color: var(--bg-light);
+      box-shadow: var(--shadow-s);
+      background-color: var(--clr-primary);
     }
   }
 
@@ -119,26 +141,6 @@ body {
 
 @media (min-width: 640px) {
   .hero {
-    .nav {
-      .menu-wrapper {
-        display: initial;
-      }
-
-      ul {
-        display: flex;
-        gap: 0 2rem;
-      }
-
-      a {
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      button {
-        display: none;
-      }
-    }
-
     .nav-wrapper {
       position: initial;
       display: flex;
@@ -146,10 +148,6 @@ body {
       //padding: 0 2rem;
       width: min(90%, 1100px);
       margin-inline: auto;
-
-      .menu-wrapper {
-        display: block;
-      }
 
       ul {
         display: flex;
@@ -194,64 +192,54 @@ body {
         margin-left: -13rem;
       }
     }
-  }
-}
 
-/*
-@media (min-width: 768px) {
-  .hero {
-    .showcase-container {
-      picture {
-        //flex: 0 2 900px;
-        margin-left: -13rem;
-      }
-
-      .content {
-        h1 {
-          font-size: 38px;
-        }
+    .nav {
+      button {
+        display: none;
       }
     }
-  }
-}
 
-@media (min-width: 1024px) {
-  .hero {
-    .showcase-container {
-      max-width: initial;
+    .menu-wrapper,
+    .menu-wrapper.active {
+      position: initial;
+      margin: 0;
+      padding: 0;
+      opacity: 1;
 
-      justify-content: center;
-
-      .content {
-        h1 {
-          font-size: 50px;
-        }
-      }
-
-      picture {
+      > * {
+        opacity: 1;
         margin: initial;
-        margin-left: -12rem;
-        flex: 0 1 570px;
+        background-color: initial;
+        align-items: center;
+        flex-direction: row;
+        padding: 0;
+        height: auto;
+        width: auto;
+        z-index: 100;
+        padding: 0;
+        gap: 0.8rem !important;
+      }
+
+      li {
+        padding: 0.3rem 0.7rem;
+        border-radius: 4px;
+        transition: background-color 0.5s, box-shadow 0.5s;
+      }
+
+      li.active {
+        background-color: var(--clr-primary);
+        box-shadow: var(--shadow-l);
       }
     }
   }
 }
 
-@media (min-width: 1280px) {
-  .hero {
-    .showcase-container {
-      picture {
-        margin-left: -13rem;
-        flex: 0 1 680px;
-      }
-
-      .content {
-        h1 {
-          font-size: 58px;
-        }
-      }
-    }
-  }
+p {
+  font-weight: 500;
 }
 
-*/
+.content {
+  p {
+    color: var(--text-muted);
+  }
+}

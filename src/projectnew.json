@@ -1,0 +1,247 @@
+{
+  "projects": [
+    {
+      "id": "p1",
+      "img": "fm/p1.png",
+      "title": "Age Calculator",
+      "tagline": "Precise age calculation with real-time validation",
+      "description": "A responsive React application that calculates exact age from birthdate with comprehensive form validation and error handling",
+      "category": "javascript",
+      "level": "intermediate",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "SCSS",
+        "Date API",
+        "Form Validation"
+      ],
+      "techIcons": ["react", "js", "sass", "api"],
+      "features": [
+        "Complex date validation logic",
+        "Real-time error states with SCSS animations",
+        "Custom React hooks for date calculations",
+        "Responsive grid layout with SCSS"
+      ],
+      "challenges": "Handling edge cases in date validation and providing clear user feedback",
+      "solutions": "Implemented custom React validation hooks with SCSS-powered animations for error states",
+      "reactHooks": ["useState", "useEffect", "custom validation hook"],
+      "scssFeatures": ["CSS Grid", "Custom variables", "Mixins", "Animations"],
+      "jsConcepts": ["Date API", "Form Validation", "Error Handling"],
+      "liveUrl": "https://bert114.github.io/age-calc/",
+      "repoUrl": "https://github.com/bert114/age-calc",
+      "showcase": true,
+      "featured": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "p2",
+      "img": "fm/p2.png",
+      "title": "Tip Calculator",
+      "tagline": "Dynamic bill splitting and tip calculations",
+      "description": "Interactive React app for calculating tips and splitting bills with real-time updates and custom percentages",
+      "category": "javascript",
+      "level": "intermediate",
+      "technologies": ["React", "JavaScript", "SCSS", "State Management"],
+      "techIcons": ["react", "js", "sass"],
+      "features": [
+        "Dynamic tip percentage calculations",
+        "Bill splitting functionality",
+        "Real-time state updates with React hooks",
+        "Custom SCSS variables for theming"
+      ],
+      "challenges": "Managing multiple interconnected input states and ensuring real-time calculations",
+      "solutions": "Used React useState and useEffect hooks with SCSS custom properties for consistent styling",
+      "reactHooks": ["useState", "useEffect"],
+      "scssFeatures": [
+        "Custom Properties",
+        "Flexbox",
+        "Calculations",
+        "Hover States"
+      ],
+      "jsConcepts": ["State Management", "DOM Manipulation", "Calculations"],
+      "liveUrl": "https://waltuh12345.github.io/Tipcalculatorapp/",
+      "repoUrl": "https://github.com/waltuh12345/Tipcalculatorapp",
+      "showcase": true,
+      "featured": false,
+      "sortOrder": 2
+    },
+    {
+      "id": "p3",
+      "img": "fm/p3.png",
+      "title": "Sunnyside Agency",
+      "tagline": "Modern landing page with advanced layouts",
+      "description": "A responsive agency landing page showcasing advanced CSS Grid and Flexbox layouts with smooth animations",
+      "category": "layout",
+      "level": "intermediate",
+      "technologies": ["React", "SCSS", "CSS Grid", "Flexbox", "JavaScript"],
+      "techIcons": ["react", "sass", "css3"],
+      "features": [
+        "Advanced CSS Grid layouts",
+        "Flexbox-based navigation",
+        "Smooth SCSS animations",
+        "Mobile-first responsive design"
+      ],
+      "challenges": "Creating complex responsive layouts that work across all device sizes",
+      "solutions": "Implemented mobile-first SCSS architecture with CSS Grid and media query mixins",
+      "reactHooks": ["useState"],
+      "scssFeatures": [
+        "CSS Grid",
+        "Flexbox",
+        "Media Query Mixins",
+        "Transform Animations"
+      ],
+      "jsConcepts": ["Mobile Menu Toggle", "Event Listeners"],
+      "liveUrl": "https://waltuh12345.github.io/sunnyside-agency-landing-page-main/",
+      "repoUrl": "https://github.com/waltuh12345/sunnyside-agency-landing-page-main/",
+      "showcase": true,
+      "featured": true,
+      "sortOrder": 3
+    },
+    {
+      "id": "p5",
+      "img": "fm/p5.png",
+      "title": "Social Media Dashboard",
+      "tagline": "Theme-switching dashboard with dark mode",
+      "description": "Feature-rich social media dashboard with theme switcher, dark mode, and dynamic data display",
+      "category": "interactive",
+      "level": "advanced",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "SCSS",
+        "Context API",
+        "Local Storage"
+      ],
+      "techIcons": ["react", "js", "sass", "context"],
+      "features": [
+        "Dark/light theme switcher",
+        "CSS custom properties for theming",
+        "React Context for state management",
+        "Local storage persistence"
+      ],
+      "challenges": "Implementing consistent theme switching across all components with persistence",
+      "solutions": "Used React Context with SCSS custom properties and localStorage for theme persistence",
+      "reactHooks": ["useState", "useContext", "useEffect"],
+      "scssFeatures": [
+        "CSS Custom Properties",
+        "Dark Mode",
+        "CSS Variables",
+        "Theme Mixins"
+      ],
+      "jsConcepts": ["Context API", "Local Storage", "Theme Management"],
+      "liveUrl": "https://waltuh12345.github.io/dash/",
+      "repoUrl": "https://github.com/waltuh12345/dash",
+      "showcase": true,
+      "featured": true,
+      "sortOrder": 4
+    },
+    {
+      "id": "p14",
+      "img": "fm/p14.png",
+      "title": "Interactive Pricing Component",
+      "tagline": "Dynamic pricing with range sliders",
+      "description": "Interactive pricing component with custom range sliders, toggle switches, and real-time price calculations",
+      "category": "interactive",
+      "level": "advanced",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "SCSS",
+        "Custom Hooks",
+        "DOM Manipulation"
+      ],
+      "techIcons": ["react", "js", "sass"],
+      "features": [
+        "Custom range slider with SCSS styling",
+        "Real-time price calculations",
+        "Toggle switch for billing periods",
+        "Custom React hooks for slider logic"
+      ],
+      "challenges": "Creating a custom-styled range slider that works consistently across browsers",
+      "solutions": "Built a custom range slider component with SCSS and React state management",
+      "reactHooks": ["useState", "useEffect", "custom slider hook"],
+      "scssFeatures": [
+        "Custom Range Slider",
+        "Calculations",
+        "Pseudo-elements",
+        "Transitions"
+      ],
+      "jsConcepts": ["Range Inputs", "Dynamic Calculations", "Event Handling"],
+      "liveUrl": "https://waltuh12345.github.io/interactive-pricing-component-main/src/",
+      "repoUrl": "https://github.com/waltuh12345/interactive-pricing-component-main",
+      "showcase": true,
+      "featured": false,
+      "sortOrder": 5
+    },
+    {
+      "id": "p19",
+      "img": "fm/p19.png",
+      "title": "Time Tracking Dashboard",
+      "tagline": "Data-driven dashboard with JSON integration",
+      "description": "Dynamic time tracking dashboard that fetches and displays data from JSON files with interactive period switching",
+      "category": "javascript",
+      "level": "advanced",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "SCSS",
+        "JSON API",
+        "Data Fetching"
+      ],
+      "techIcons": ["react", "js", "sass", "api"],
+      "features": [
+        "JSON data integration and fetching",
+        "Dynamic time period switching",
+        "Advanced CSS Grid dashboard layout",
+        "Data visualization with SCSS"
+      ],
+      "challenges": "Managing asynchronous data fetching and updating the UI based on selected time periods",
+      "solutions": "Implemented React useEffect for data fetching and SCSS for responsive grid layouts",
+      "reactHooks": ["useState", "useEffect", "custom data hook"],
+      "scssFeatures": [
+        "CSS Grid",
+        "Data Attributes",
+        "Conditional Styling",
+        "Layouts"
+      ],
+      "jsConcepts": ["JSON Fetching", "Data Manipulation", "Async/Await"],
+      "liveUrl": "https://waltuh12345.github.io/random-chall/",
+      "repoUrl": "https://github.com/waltuh12345/random-chall",
+      "showcase": true,
+      "featured": true,
+      "sortOrder": 6
+    }
+  ],
+  "categories": [
+    {
+      "id": "javascript",
+      "name": "JavaScript Apps",
+      "description": "Projects focused on JavaScript functionality and interactivity",
+      "count": 8
+    },
+    {
+      "id": "layout",
+      "name": "Layout & Design",
+      "description": "Projects showcasing CSS Grid, Flexbox, and responsive design",
+      "count": 7
+    },
+    {
+      "id": "interactive",
+      "name": "Interactive Components",
+      "description": "Projects with complex user interactions and state management",
+      "count": 6
+    }
+  ],
+  "technologies": [
+    "React",
+    "JavaScript",
+    "SCSS",
+    "CSS Grid",
+    "Flexbox",
+    "Context API",
+    "Local Storage",
+    "Date API",
+    "Form Validation",
+    "JSON API"
+  ]
+}

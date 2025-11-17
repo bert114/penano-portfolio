@@ -27,17 +27,19 @@
       font-size: 13px;
     }
 
+    --radius: 6px;
+
     .input-wrapper {
       display: flex;
       flex-direction: column;
       gap: 1.2rem;
       > * {
-        border-radius: 7px;
+        background-color: var(--bg-light);
+        border-radius: var(--radius);
         height: 2.5rem;
         position: relative;
-        padding: 0 1.2rem;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
-          rgb(163, 163, 163) 0px 0px 0px 1px inset;
+        padding: 0 0.8rem;
+        box-shadow: var(--shadow-s);
       }
 
       .message {
@@ -51,21 +53,24 @@
       }
 
       input {
+        color: var(--text);
         border: none;
         outline: none;
         height: 100%;
         width: 100%;
         background: none;
         font-size: 12px;
+        font-weight: 500;
       }
 
       input::placeholder {
-        color: var(--clr-input);
+        color: var(--text-muted);
         font-weight: 500;
       }
     }
 
     button {
+      border-radius: var(--radius);
       font-weight: 600;
       color: white;
       border: none;
@@ -74,7 +79,9 @@
       height: 2.2rem;
       margin-top: 2rem;
       margin-bottom: 3rem;
-      font-size: 13px;
+      font-size: 14px !important;
+      text-transform: uppercase;
+      box-shadow: var(--shadow-l) !important;
     }
 
     ul {

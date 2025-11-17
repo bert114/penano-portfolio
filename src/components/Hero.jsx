@@ -7,15 +7,17 @@ import closeIcon from "../assets/icons/close.svg";
 import heroImg from "../assets/img/hero.png";
 
 import { Link } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
 function Hero() {
-  const [menu, handleMenu] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   const handleClick = () => {
     if (!menu) {
-      handleMenu(true);
+      setMenu(true);
     } else {
-      handleMenu(false);
+      setMenu(false);
     }
   };
 
@@ -35,6 +37,79 @@ function Hero() {
   const isMobile = useMediaQuery("(min-width: 640px)");
   const condition = isMobile || !menu ? "menu-wrapper" : "menu-desktop";
 
+  const hideMenu = (e) => {
+    console.log(e);
+  };
+
+  useEffect(() => {
+    const content = document.querySelector(".menu-wrapper");
+    if (menu) {
+      content.classList.add("active");
+    } else {
+      content.classList.remove("active");
+    }
+
+    window.addEventListener("click", (e) => {
+      const target = e.target;
+      const btn = document.querySelector(".menu-btn");
+
+      if (target.matches("ul") || target.matches("li") || target.matches("a"))
+        return;
+
+      setMenu(false);
+
+      return;
+      handleMenu();
+      // handleClick();
+    });
+  }, [menu]);
+
+  useEffect(() => {
+    const lists = document.querySelectorAll(".menu-wrapper ul li");
+
+    const handleActive = async (e) => {
+      const li = e.target.closest("li");
+      const link = li.querySelector("a");
+
+      lists.forEach((li) => {
+        li.classList.remove("active");
+        link.click();
+      });
+
+      li.classList.add("active");
+
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          setMenu(false);
+        }, 1000);
+      });
+    };
+
+    lists.forEach((elem) => {
+      elem.addEventListener("click", handleActive);
+    });
+
+    return () => {
+      lists.forEach((elem) => {
+        elem.removeEventListener("click", handleClick);
+      });
+    };
+  });
+
+  const handleMenu = (e) => {
+    const button = e.currentTarget;
+    const state = button.getAttribute("data-state");
+    e.stopPropagation();
+
+    if (state === "menu") {
+      setMenu(false);
+    } else {
+      setMenu(true);
+    }
+
+    console.log(state);
+  };
+
   return (
     <div className="hero wrapper">
       <div className="nav-wrapper">
@@ -44,12 +119,17 @@ function Hero() {
               <img src={logo} alt="web_logo" />
             </a>
           </div>
-          <button className="menu-btn" onClick={handleClick}>
-            <img src={!menu ? menuIcon : closeIcon} alt="menu" />
+          <button
+            className="menu-btn"
+            onClick={(e) => handleMenu(e)}
+            data-state={menu ? "menu" : "close"}
+          >
+            {/* <img src={!menu ? menuIcon : closeIcon} alt="menu" /> */}
+            <FontAwesomeIcon icon={!menu ? faBars : faClose} />
           </button>
         </div>
 
-        <div className={condition}>
+        <div className={`menu-wrapper`}>
           <ul>
             <li>
               <Link to="about" smooth={true} duration={500}>
