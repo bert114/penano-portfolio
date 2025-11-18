@@ -16,12 +16,15 @@ function Contact() {
   const sendEmail = async (e) => {
     e.preventDefault();
 
+    console.log(inputEmail.current.value);
+
     var templateParams = {
       name: inputName.current.value,
-      title: "New Message",
-      message: inputMessage.current.value,
-      email: "janalbertpenano14@gmail.com",
+      email: "janalbertpenano14@gmail.com", // Your email as recipient
       from_email: inputEmail.current.value,
+      reply_to: inputEmail.current.value,
+      title: "Contact Us: New Message", // Use 'title' as subject
+      message: `From: ${inputName.current.value} <${inputEmail.current.value}>\n\nMessage: ${inputMessage.current.value}`,
     };
     await emailjs
       .send("service_gpd346c", "template_xwqjvnw", templateParams)
@@ -79,11 +82,18 @@ function Contact() {
                 />
               </div>
               <div className="message">
-                <input
-                  type="text"
+                {/* <input
+                  type=""
                   placeholder="Message"
                   name="message"
                   ref={inputMessage}
+                /> */}
+
+                <textarea
+                  ref={inputMessage}
+                  placeholder="Message"
+                  name="message"
+                  style={{ resize: "none" }}
                 />
               </div>
             </div>
